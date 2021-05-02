@@ -52,27 +52,10 @@
         </field>
     </record>
 
-    <!-- Top menu item -->
-    <!-- <menuitem id="situation_comptable_menu_root"
-        name="Situation Client"
-        action="situation_client"
-        sequence="10"/> -->
-
     <menuitem id="situation_client_menu"
         name="Situation Client"
-        parent="a14_dz_mediclim_situation_comptable.situation_mediclim_menu_root"
+        parent="a14_dz_mediclim.situation_mediclim_menu_root"
         action="situation_client"
         sequence="10"/>
-
-    <!-- <menuitem id="hospital_patient_menu_root"
-        name="Patients"
-        parent="hospital_menu_root"
-        sequence="10"/>
-
-    <menuitem id="hospital_patient_menu"
-        name="Patients"
-        parent="hospital_patient_menu_root"
-        action="action_patients"
-        sequence="10"/> -->
 
 </odoo>

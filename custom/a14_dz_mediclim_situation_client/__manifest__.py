@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "a14_dz_mediclim_situation_client",
+    'name': "Mediclim Situation Client",
 
     'summary': """
         a14_dz_mediclim_situation_client""",
 
     'description': """
-        Long description of module's purpose
-    """,
+        a14_dz_mediclim_situation_client""",
 
     'author': "My Company",
     'website': "http://www.yourcompany.com",
@@ -19,11 +18,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','a14_dz_mediclim_situation_comptable'],
+    'depends': ['base','a14_dz_mediclim'],
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         'views/situation_client.xml',
     ],
     # only loaded in demonstration mode

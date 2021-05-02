@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "a14_dz_mediclim_situation_avancement",
+    'name': "Mediclim Situation Avancement",
 
     'summary': """
         a14_dz_mediclim_situation_avancement""",
 
     'description': """
-        Long description of module's purpose
-    """,
+        a14_dz_mediclim_situation_avancement""",
 
     'author': "My Company",
     'website': "http://www.yourcompany.com",
@@ -19,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','a14_dz_mediclim'],
 
     # always loaded
     'data': [
