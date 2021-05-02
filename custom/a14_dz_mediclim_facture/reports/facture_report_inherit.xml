@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="facture_report_header_company_inherit" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[@t-field='company.partner_id']" position="after">
+            <!-- <span>RC : </span> -->
+            <!-- <span t-esc="company.partner_rc"/> -->
+            <div class="mt16">
+                <t>RC</t>: <span t-field="company.partner_rc"/>
+            </div>
+            <div class="mt16">
+                <t>NIF</t>: <span t-field="company.partner_nif"/>
+            </div>
+            <div class="mt16">
+                <t>NIS</t>: <span t-field="company.partner_nis"/>
+            </div>
+            <div class="mt16">
+                <t>AI</t>: <span t-field="company.partner_ai"/>
+            </div>
+            <div class="mt16">
+                <t>RIB</t>: <span t-field="company.partner_rib"/>
+            </div>
+        </xpath>
+
+    </template>
+
+    <template id="facture_report_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//address[@t-field='o.partner_id']" position="after">
+            <div class="mt16">
+                <t>RC</t>: <span t-field="o.partner_id.partner_rc"/>
+            </div>
+            <div class="mt16">
+                <t>NIF</t>: <span t-field="o.partner_id.partner_nif"/>
+            </div>
+            <div class="mt16">
+                <t>TIN</t>: <span t-field="o.partner_id.partner_tin"/>
+            </div>
+            <div class="mt16">
+                <t>NIS</t>: <span t-field="o.partner_id.partner_nis"/>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

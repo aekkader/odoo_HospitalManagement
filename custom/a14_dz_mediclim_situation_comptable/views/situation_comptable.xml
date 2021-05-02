@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="situation_comptable_tree" model="ir.ui.view">
+        <field name="name">situation.comptable.tree</field>
+        <field name="model">situation.comptable</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+               
+                <field name="sca"/>
+                <field name="sys_ctrl"/>
+                
+                <!-- <group col="4"> -->
+                    <field name="qty_contractuel"/>
+                    <field name="qty_precedente"/>
+                    <field name="qty_mois"/>
+                    <field name="qty_cumul"/>
+                <!-- </group> -->
+                
+                <field name="pu"/>
+
+                <field name="mnt_contractuel"/>
+                <field name="mnt_precedente"/>
+                <field name="mnt_mois"/>
+                <field name="mnt_total"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="situation_comptable" model="ir.actions.act_window">
+        <field name="name">Situation Comptable</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">situation.comptable</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="situation_comptable_menu"
+        name="Situation Comptable"
+        parent="a14_dz_mediclim.situation_mediclim_menu_root"
+        action="situation_comptable"
+        sequence="10"/>
+
+</odoo>

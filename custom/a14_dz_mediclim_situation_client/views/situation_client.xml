@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="situation_client_form" model="ir.ui.view">
+        <field name="name">situation.comptable.form</field>
+        <field name="model">situation.comptable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="project_id"/>
+                            <field name="client_id"/>
+                        </group>
+                        <group>
+                            <field name="sca"/>
+                        </group>
+                        <group>                        
+                            <field name="sys_ctrl"/>
+                        </group>
+                        <group>
+                            <field name="qty_contractuel"/>
+                            <field name="qty_precedente"/>
+                            <field name="qty_mois"/>
+                            <field name="qty_cumul"/>   
+                        </group>
+
+                        <group>
+                            <field name="pu"/>
+                        </group>
+                        <group>
+                            <field name="mnt_contractuel"/>
+                            <field name="mnt_precedente"/>
+                            <field name="mnt_mois"/>
+                            <field name="mnt_total"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="situation_client" model="ir.actions.act_window">
+        <field name="name">Situation Client</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">situation.comptable</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first record!
+            </p>
+        </field>
+    </record>
+
+    <!-- Top menu item -->
+    <!-- <menuitem id="situation_comptable_menu_root"
+        name="Situation Client"
+        action="situation_client"
+        sequence="10"/> -->
+
+    <menuitem id="situation_client_menu"
+        name="Situation Client"
+        parent="a14_dz_mediclim_situation_comptable.situation_mediclim_menu_root"
+        action="situation_client"
+        sequence="10"/>
+
+    <!-- <menuitem id="hospital_patient_menu_root"
+        name="Patients"
+        parent="hospital_menu_root"
+        sequence="10"/>
+
+    <menuitem id="hospital_patient_menu"
+        name="Patients"
+        parent="hospital_patient_menu_root"
+        action="action_patients"
+        sequence="10"/> -->
+
+</odoo>

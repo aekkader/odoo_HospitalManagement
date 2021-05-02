@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Top menu item -->
+    <menuitem id="situation_mediclim_menu_root"
+        name="Mediclim"
+        web_icon="a14_dz_mediclim,static/description/icon.png"
+        sequence="0"/>
+
+</odoo>

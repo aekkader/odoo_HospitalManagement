@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sale_report_inherit" 
+        inherit_id="sale.report_saleorder_document">
+
+        <!-- <field name="partner_id"  position="attributes">
+            <attribute name="domain">[('customer_rank', '=', True)]</attribute>
+        </field> -->
+
+        <!-- <xpath expr="//div[@class='row mt32 mb32']" position="after">
+            <div class="row mt32 mb32" id="test_inherit">
+                <div class="col-auto col-3 mw-100 mb-2">
+                    <strong>Test:</strong>
+                </div>
+            </div>
+        </xpath> -->
+
+        <xpath expr="//div[@class='row mt32 mb32']" position="replace">
+        </xpath>
+
+        <!-- <xpath expr="//table/tr/td[@name='td_taxes']" position="replace"> -->
+        <xpath expr="//td[@name='td_name']" position="after">
+            <td name="td_barcode" class="text-right">
+                <span t-field="line.product_id.barcode"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th name="th_barcode" class="text-right">Code Barre</th>
+        </xpath>
+
+    </template>
+
+</odoo>
