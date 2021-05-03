@@ -27,6 +27,13 @@ class SituationComptable(models.Model):
     client_id = fields.Many2one('res.partner', string='Client', domain="[('customer_rank', '=', True)]")
     # client_id = fields.Many2one('res.partner', string='Client')
 
+    def name_get(self):
+        result = []
+        for decompte in self:
+            name = decompte.sys_ctrl
+            result.append((decompte.id, name))
+        return result
+
     @api.depends('qty_contractuel', 'pu')
     def _mnt_contractuel(self):
         for r in self:

@@ -8,8 +8,9 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="project_id"/>
-                        <field name="select_avancement"/>
+<!--                        <field name="project_id"/>-->
+                        <field name="project_id" on_change="onchange_project_id(project_id)"/>
+                        <field name="decompte_id"/>
                         <field name="qty_avancement"/>
                     </group>
                 </sheet>
